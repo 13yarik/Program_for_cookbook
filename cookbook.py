@@ -17,6 +17,7 @@ def load_cookbook(file_name):
                 ingredient_dict = {'ingredient_name': ingredient_name, 'quantity': quantity, 'measure': measure}
                 ingredients_list.append(ingredient_dict)
             cook_book[dish_name] = ingredients_list
+            f.readline()
     return cook_book
 
 def get_shop_list_by_dishes(dishes, person_count):
@@ -38,8 +39,8 @@ def get_shop_list_by_dishes(dishes, person_count):
 cookbook = load_cookbook("cookbook.txt")
 # print(json.dumps(cookbook, indent=2, ensure_ascii=False)) 
 
-shop = get_shop_list_by_dishes(['Омлет', 'Утка по-пекински'], 2)
-print(json.dumps(shop, indent=2, ensure_ascii=False)) 
+shop = get_shop_list_by_dishes(['Омлет', 'Запеченный картофель'], 2)
+# print(json.dumps(shop, indent=2, ensure_ascii=False)) 
 
 
 
